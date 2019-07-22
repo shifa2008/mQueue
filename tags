@@ -1,0 +1,43 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.9~svn20110310	//
+CC	Makefile	/^CC	 =$(MCU)gcc$/;"	m
+CallRet	simple_main.c	/^void CallRet(void *This)$/;"	f	signature:(void *This)
+CreateQueueObj	src/mQueue.c	/^mQueueObj_t *CreateQueueObj(mQueueObj_t *This,mQueueStroageSpace_t *StroageSpace,void *data)$/;"	f	signature:(mQueueObj_t *This,mQueueStroageSpace_t *StroageSpace,void *data)
+CreateQueueObj	src/mQueue.h	/^mQueueObj_t *CreateQueueObj(mQueueObj_t *This,mQueueStroageSpace_t *StroageSpace,void *data);$/;"	p	signature:(mQueueObj_t *This,mQueueStroageSpace_t *StroageSpace,void *data)
+End	src/mQueue.h	/^  char End;$/;"	m	struct:mQueueObj_n	access:public
+EnterNode	src/mQueue.h	/^  mQueueStroageSpace_t *EnterNode;$/;"	m	struct:mQueueObj_n	access:public
+EnterQueue	src/mQueue.c	/^void EnterQueue(mQueueObj_t *This,mQueueStroageSpace_t *StroageSpace,void *data)$/;"	f	signature:(mQueueObj_t *This,mQueueStroageSpace_t *StroageSpace,void *data)
+EnterQueue	src/mQueue.h	/^void (*EnterQueue)(struct mQueueObj_n *This,mQueueStroageSpace_t *StroageSpace,void *data);$/;"	m	struct:mQueueObj_n	access:public
+IsQueueNull	src/mQueue.c	/^long IsQueueNull(mQueueObj_t *This)$/;"	f	signature:(mQueueObj_t *This)
+IsQueueNull	src/mQueue.h	/^long (*IsQueueNull)(struct mQueueObj_n *This);$/;"	m	struct:mQueueObj_n	access:public
+LstQueue	src/mQueue.c	/^long LstQueue(mQueueObj_t *This,void (*CallRet)(void *This))$/;"	f	signature:(mQueueObj_t *This,void (*CallRet)(void *This))
+LstQueue	src/mQueue.h	/^long (*LstQueue)(struct mQueueObj_n *This,void (*CallRet)(void *This));$/;"	m	struct:mQueueObj_n	access:public
+MQUEUE_H	src/mQueue.h	2;"	d
+OBJS	Makefile	/^OBJS     = $(patsubst %.c,%.o, $(SRCS))$/;"	m
+OBJSM	Makefile	/^OBJSM    = $(patsubst %.c,%.o,$(SRCSM))$/;"	m
+OutNode	src/mQueue.h	/^  mQueueStroageSpace_t *OutNode;$/;"	m	struct:mQueueObj_n	access:public
+OutQueue	src/mQueue.c	/^void *OutQueue(mQueueObj_t *This,char *OutFlag)$/;"	f	signature:(mQueueObj_t *This,char *OutFlag)
+OutQueue	src/mQueue.h	/^void *(*OutQueue)(struct mQueueObj_n *This,char *OutFlag);$/;"	m	struct:mQueueObj_n	access:public
+SRCS	Makefile	/^SRCS     = $(wildcard .\/src\/*.c .\/*.c)$/;"	m
+SRCSM	Makefile	/^SRCSM    = $(wildcard .\/*.c)$/;"	m
+TARGETS	Makefile	/^TARGETS  = $(SRCSM:%.c=%)$/;"	m
+data	src/mQueue.h	/^   void *data;$/;"	m	struct:node	access:public
+mQueueObj_n	src/mQueue.h	/^typedef struct mQueueObj_n {$/;"	s
+mQueueObj_n::End	src/mQueue.h	/^  char End;$/;"	m	struct:mQueueObj_n	access:public
+mQueueObj_n::EnterNode	src/mQueue.h	/^  mQueueStroageSpace_t *EnterNode;$/;"	m	struct:mQueueObj_n	access:public
+mQueueObj_n::EnterQueue	src/mQueue.h	/^void (*EnterQueue)(struct mQueueObj_n *This,mQueueStroageSpace_t *StroageSpace,void *data);$/;"	m	struct:mQueueObj_n	access:public
+mQueueObj_n::IsQueueNull	src/mQueue.h	/^long (*IsQueueNull)(struct mQueueObj_n *This);$/;"	m	struct:mQueueObj_n	access:public
+mQueueObj_n::LstQueue	src/mQueue.h	/^long (*LstQueue)(struct mQueueObj_n *This,void (*CallRet)(void *This));$/;"	m	struct:mQueueObj_n	access:public
+mQueueObj_n::OutNode	src/mQueue.h	/^  mQueueStroageSpace_t *OutNode;$/;"	m	struct:mQueueObj_n	access:public
+mQueueObj_n::OutQueue	src/mQueue.h	/^void *(*OutQueue)(struct mQueueObj_n *This,char *OutFlag);$/;"	m	struct:mQueueObj_n	access:public
+mQueueObj_t	src/mQueue.h	/^}mQueueObj_t;$/;"	t	typeref:struct:mQueueObj_n
+mQueueStroageSpace_t	src/mQueue.h	/^}mQueueStroageSpace_t;$/;"	t	typeref:struct:node
+main	simple_main.c	/^int main(void)$/;"	f	signature:(void)
+next	src/mQueue.h	/^   struct node* next;$/;"	m	struct:node	typeref:struct:node::node	access:public
+node	src/mQueue.h	/^typedef struct node{$/;"	s
+node::data	src/mQueue.h	/^   void *data;$/;"	m	struct:node	access:public
+node::next	src/mQueue.h	/^   struct node* next;$/;"	m	struct:node	typeref:struct:node::node	access:public
